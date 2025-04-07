@@ -1,3 +1,17 @@
+# React Hooks scribble
+
+Clone the repository, run it locally and open the URL in your browser:
+
+```sh
+$ npm install
+$ npm run dev
+$ open http://localhost:5173/
+```
+
+Notice the consuming component (App.tsx) uses a property exposed by the `useObject` hook that never changes. And yet the component still updates as an unrelated property exposed by the same hook get updated every two seconds.
+
+The project uses `react-scan` to make these updates easily noticeable in the browser.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -19,15 +33,15 @@ export default tseslint.config({
     // Alternatively, use this for stricter rules
     ...tseslint.configs.strictTypeChecked,
     // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
+    ...tseslint.configs.stylisticTypeChecked
   ],
   languageOptions: {
     // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
+      tsconfigRootDir: import.meta.dirname
+    }
+  }
 })
 ```
 
@@ -42,13 +56,13 @@ export default tseslint.config({
   plugins: {
     // Add the react-x and react-dom plugins
     'react-x': reactX,
-    'react-dom': reactDom,
+    'react-dom': reactDom
   },
   rules: {
     // other rules...
     // Enable its recommended typescript rules
     ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
+    ...reactDom.configs.recommended.rules
+  }
 })
 ```
